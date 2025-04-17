@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_key_pair" "key_pair" {
   key_name   = "id_rsa.pub"
-  public_key = file("${path.module}/infra-key.pub")
+  public_key = file("${path.module}/deploy_key.pub")
 }
 
 resource "aws_instance" "provisioning_host" {
